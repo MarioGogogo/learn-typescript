@@ -2,7 +2,7 @@
  * @Author      : Jerrychan
  * @Date        : 2019-08-27 13: 17: 57
  * @LastEditors : Jerrychan
- * @LastEditTime: 2019-08-27 14: 06: 43
+ * @LastEditTime: 2019-08-27 15: 02: 31
  * @Description : 这里填写页面信息
  */
 console.log('interface')
@@ -63,8 +63,8 @@ console.log(getVegetables({
 
 //只读属性
 interface Vegetables1 {
-                                      color?: string,
-                             readonly type  : string
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                color?: string,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       readonly type  : string
 }
 
 let veg: Vegetables1 = {
@@ -75,8 +75,8 @@ let veg: Vegetables1 = {
 
 // 限制读数组 不能修改数组
 interface ArrInter {
-                                      0: number,
-                             readonly 1: string
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                0: number,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       readonly 1: string
 }
 
 let narr: ArrInter = [1, 'a']
@@ -94,9 +94,94 @@ interface AddFunc {
 
 // 类型别名
 
-type AddFunc1=（num1:number,num2:number)=>number
+// type AddFunc1 =（num4: number, num5: number) => number
 
-const add；AddFunc1 = (n1,n2) => n1 + n2
+
+const add:AddFunc = (n1,n2) => n1+n2;
+
+console.log(add(2,4,5));
+
+
+
+//索引
+// interface RoleDic {
+//   [id: number]: string, 犯错
+// }
+interface RoleDic{
+  [id:string]: string,
+}
+
+const roles:RoleDic = {
+    'str': '234',
+    2    : '345',
+}
+console.log('roles',roles);
+
+
+
+
+//接口的继承
+
+interface Animate {
+   run: string
+}
+
+interface Cat extends Animate {
+   eat: string
+}
+
+interface Dog{
+   eat: string
+}
+
+const cat:Cat ={
+   run: '跑🏃🏻',
+   eat: '吃🍔'
+}
+
+console.log(cat);
+
+// const dog:Dog={
+//   run: '跑🏃🏻',
+// }
+
+// console.log(dog);
+
+interface Counter{
+   ()   : void,
+   count: number
+}
+
+const getAdd = ():Counter =>{
+    const c       = ()=>{c.count++}
+          c.count = 0;
+    return c
+}
+
+const counter:Counter = getAdd()
+
+counter()
+console.log(counter.count);
+counter()
+console.log(counter.count);
+counter()
+console.log(counter.count);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
