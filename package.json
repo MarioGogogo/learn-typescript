@@ -1,0 +1,25 @@
+{
+  "name"   : "TypeScript",
+  "version": "1.0.0",
+  "main"   : "./src/index.ts",
+  "author" : "Mario <148373644@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config  ./build/webpack.config.js",
+    "dev"  : "webpack-dev-server  --config ./build/webpack.config.js",
+    "build": "webpack --config ./build/webpack.config.js"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env"           : "^5.2.0",
+    "html-webpack-plugin" : "^3.2.0",
+    "ts-loader"           : "^6.0.4",
+    "ts-node"             : "^8.3.0",
+    "webpack"             : "^4.39.2",
+    "webpack-cli"         : "^3.3.7",
+    "webpack-dev-server"  : "^3.8.0"
+  }
+}

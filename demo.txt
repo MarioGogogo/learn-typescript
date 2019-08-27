@@ -1,0 +1,56 @@
+/*
+ * @Author      : Jerrychan
+ * @Date        : 2019-08-27 00: 00: 02
+ * @LastEditors : Jerrychan
+ * @LastEditTime: 2019-08-27 09: 58: 08
+ * @Description : 这里填写页面信息
+ */
+//bool
+let isDone: boolean = false;
+
+let isDone2: boolean
+isDone2 = true
+
+// bool2 = '123'
+
+//number
+
+let num: number = 123
+
+num = 0b1111011
+num = 0o173
+num = 0x7b
+
+//string
+let str: string
+str = 'abc'
+str = '数值'
+// str = 123
+
+
+//array
+
+let arr: number[]
+arr = [1, 2, 3]
+// arr = [1,2,'st']
+let arr2: Array<number>
+let arr3: (string | number)[]
+arr3 = [1, 2, 'st']
+
+// arr3 = [1, 2,'st',{a:1}]
+
+//元祖类型  数组的拓展  固定长度 固定类型的
+let tuple: [string, number, object];
+tuple = ['string', 1, { a: 12 }]
+// tuple = ['string', 1, { a: 12 }, 123]
+// tuple[3] = {a:2}  //下标3就是undefined
+
+
+//枚举  建议大写
+enum Roles {
+    SUPER_ADMIN,
+    ADMIN,
+    USER
+}
+
+console.log(Roles.SUPER_ADMIN);
