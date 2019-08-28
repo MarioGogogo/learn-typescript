@@ -6,4 +6,4 @@
  * @Description : 这里填写页面信息
  */
 // import './example/interface'
- import './example/class'
+ import './example/function'
