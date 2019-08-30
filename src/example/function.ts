@@ -121,3 +121,4 @@ const uiElement: UIElement = {
 uiElement.addClickListener(h.onClickBad)
 
 // ==========>重载============
+// 函数声明 ==> 去判断某一个方法智能闯入数组或数字,如果传入数字 则就报错
